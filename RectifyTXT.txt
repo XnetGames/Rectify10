@@ -2,3 +2,5 @@ Attention! This is not the entire source code of Rectify 10, please wait for the
 
 
 Rectify 10 V0.1 ALPHA By XnetTeam.
+
+Installer pack: tkinter
