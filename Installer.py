@@ -15,14 +15,12 @@ tk.wm_attributes("-topmost", 1)
 canvas = Canvas(tk, width=600, height=400, bd=0, highlightthickness=0)
 canvas.pack()
 
-our_image = PhotoImage(file = "incomplete.png")
-our_label = Label(tk)
-our_label.image = our_image
-our_label['image'] = our_label.image
-our_label.place(x = 10, y = 70)
+our_image = PhotoImage(file="incomplete.png")
+our_label = Label(tk, image=our_image)
+our_label.place(x=5, y=85)
 
-canvas.create_text(360,70,tex="Добро пожаловать!",fill="black",font=(100))
-canvas.create_text(395,95,tex="Установка будет в 2 этапа,",fill="black",font=(10))
-canvas.create_text(370,120,tex="Нужных для Rectify10",fill="black",font=(100))
+canvas.create_text(360, 70, text="Добро пожаловать!", fill="black", font=("Arial", 20))
+canvas.create_text(370, 120, text="Нужных для Rectify10", fill="black", font=("Arial", 15))
+canvas.create_text(410, 100, text="Установка пройдет в 2 этапа, ", fill="black", font=("Arial", 15))
 
 tk.mainloop()
