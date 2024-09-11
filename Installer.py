@@ -20,7 +20,7 @@ def switch_image():
 
 tk = Tk()
 tk.protocol("WM_DELETE_WINDOW", on_closing)
-tk.title("Установщик Rectify10 v1.0")
+tk.title("Установщик Rectify10 v1.0 (Beta2)")
 tk.resizable(0, 0)
 tk.wm_attributes("-topmost", 1)
 canvas = Canvas(tk, width=600, height=400, bd=0, highlightthickness=0)
@@ -55,8 +55,7 @@ def execute_commands():
 def run_script():
     subprocess.run(["python", "installerwindow2.py"])
 
-# Modify the button command to execute the new function
-button = ttk.Button(tk, text="Установить", command=execute_commands)
-button.pack()
+btn = ttk.Button(text="Установить", command=execute_commands)
+btn.place(relx=.99, rely=.99, anchor="se")
 
 tk.mainloop()
